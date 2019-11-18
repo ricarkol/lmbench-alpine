@@ -290,7 +290,7 @@ $O/bw_pipe:  bw_pipe.c timing.h stats.h bench.h $O/lmbench.a
 
 $O/bw_tcp.s:bw_tcp.c bench.h timing.h stats.h lib_tcp.h
 $O/bw_tcp:  bw_tcp.c bench.h timing.h stats.h lib_tcp.h $O/lmbench.a
-	$(COMPILE) -o $O/bw_tcp bw_tcp.c $O/lmbench.a $(LDLIBS)
+	$(COMPILE) -o $O/bw_tcp bw_tcp.c $O/lmbench.a $(LDLIBS) -ltirpc
 
 $O/bw_udp.s:bw_udp.c bench.h timing.h stats.h lib_udp.h
 $O/bw_udp:  bw_udp.c bench.h timing.h stats.h lib_udp.h $O/lmbench.a
